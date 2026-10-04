@@ -48,7 +48,7 @@ int main(int argc, const char** argv) {
         args.insert(args.begin() + 1, "start");
     }
 
-    argparse::ArgumentParser rootParser("turingdb", "1.0", argparse::default_arguments::help);
+    argparse::ArgumentParser rootParser("turingdb", TURINGDB_VERSION_STRING,argparse::default_arguments::help);
 
     std::unique_ptr<StartCmd> startCmd = StartCmd::create();
     std::unique_ptr<StopCmd> stopCmd = StopCmd::create();
